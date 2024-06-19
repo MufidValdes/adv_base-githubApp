@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">GitHub User App</string>
+    <string name="username">Username : %s</string>
+    <string name="name">Nama : %s</string>
+    <string name="location">Location</string>
+    <string name="repository">%d\n repository</string>
+    <string name="company">Company : %s</string>
+    <string name="following">%d\n following</string>
+    <string name="follower">%d\n follower</string>
+    <string name="followers_title">Followers</string>
+    <string name="following_title">Following</string>
+    <string name="gist">%d\n gist</string>
+    <string name="avatar">Avatar</string>
+    <string name="website">Website</string>
+
+    <!-- Other string resources-->
+
+    <string name="search_hint">Enter a Github\'s username</string>
+    <string name="user_not_found">User not found .</string>
+    <string name="search_guide">search a Github\'s username\n in search icon.</string>
+    <string name="content_description">User Avatar</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="search">Search</string>
+    <string name="language_settings_menu_item">language_setting</string>
+    <string name="exit_menu_item">Exit</string>
+    <string name="share">share</string>
+    <string name="favorite">Favorite</string>
+    <string name="todo">TODO</string>
+
+
+    <string-array name="tab_title">
+        <item>@string/followers_title</item>
+        <item>@string/following_title</item>
+    </string-array>
+
+    <string name="moonicon">monicon</string>
+    <string name="sunicon">sunicon</string>
+    <string name="theme_setting">theme setting</string>
+    <string name="change_notification_settings">Notifikasi Settings</string>
+    <string name="daily_reminder">Daily Remider</string>
+    <string name="reminder_setting">Remider Setting</string>
+    <string name="setting">Setting</string>
+    <string name="daily_message">Find new favorite user on Github</string>
+    <string name="username_detail">username detail</string>
+
+</resources>

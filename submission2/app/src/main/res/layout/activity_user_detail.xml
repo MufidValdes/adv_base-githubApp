@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".UserDetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#18212B">
+
+        <ImageView
+            android:id="@+id/detailsIvAvatar"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginTop="32dp"
+            android:contentDescription="@string/content_description"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/details_lv_name"
+            style="@style/TextContent.TitleDetails"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailsIvAvatar"
+            tools:text="@string/name" />
+
+        <TextView
+            android:id="@+id/details_lv_username"
+            style="@style/TextContent.SubtitleDetails"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/details_lv_name"
+            tools:text="@string/username" />
+
+        <ImageButton
+            android:id="@+id/share_pic"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            android:background="#18212B"
+            android:contentDescription="@string/avatar"
+            android:src="@drawable/ic_baseline_share_24"
+            app:layout_constraintBottom_toTopOf="@+id/tabs"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.954"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/details_lv_follower"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/details_lv_follower"
+            style="@style/TextContent.Details"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/details_lv_following"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/details_lv_following"
+            app:layout_constraintTop_toTopOf="@+id/details_lv_following"
+            tools:text="@string/follower" />
+
+        <TextView
+            android:id="@+id/details_lv_repository"
+            style="@style/TextContent.Details"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/details_lv_gist"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/details_lv_bio"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="@string/repository" />
+
+        <TextView
+            android:id="@+id/details_lv_following"
+            style="@style/TextContent.Details"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/details_lv_gist"
+            app:layout_constraintEnd_toStartOf="@+id/details_lv_follower"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/details_lv_gist"
+            app:layout_constraintTop_toTopOf="@+id/details_lv_gist"
+            tools:text="@string/following" />
+
+        <TextView
+            android:id="@+id/details_lv_gist"
+            style="@style/TextContent.Details"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/details_lv_repository"
+            app:layout_constraintEnd_toStartOf="@+id/details_lv_following"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/details_lv_repository"
+            app:layout_constraintTop_toTopOf="@+id/details_lv_repository"
+            tools:text="@string/gist" />
+
+        <TextView
+            android:id="@+id/details_lv_company"
+            style="@style/TextContent.Details"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:drawablePadding="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAlignment="center"
+            app:drawableStartCompat="@drawable/ic_baseline_company"
+            app:layout_constraintBottom_toTopOf="@+id/details_lv_location"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/details_lv_following"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="@string/company" />
+
+        <TextView
+            android:id="@+id/details_lv_location"
+            style="@style/TextContent.Details"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:drawablePadding="4dp"
+            android:textAlignment="center"
+            app:drawableStartCompat="@drawable/ic_baseline_location"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/details_lv_company"
+            tools:text="@string/location" />
+
+
+        <TextView
+            android:id="@+id/details_lv_bio"
+            style="@style/TextContent.Details"
+            android:layout_width="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/detailsIvAvatar"
+            app:layout_constraintTop_toBottomOf="@+id/details_lv_username"
+            tools:text="BIO" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@color/stroke_gray"
+            app:layout_constraintBottom_toTopOf="@+id/view_pager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/details_lv_location"
+            app:tabTextColor="@color/white"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tabs" />
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>
